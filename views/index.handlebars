@@ -1,0 +1,38 @@
+<div class="container">
+  <h1 class="text-center mt-4">你想對誰說幹話？</h1>
+  <form action="/" method="POST">
+    <div class="d-flex career-target justify-content-between">
+      <div class="card m-2">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5668/angry-developer.jpg" alt="工程師"
+          style="width: 18rem; height: 14rem;">
+        <div class="card-body text-center">
+          <label for="engineer">工程師</label>
+          <input type="radio" name="Profession" id="engineer" value="engineer">
+        </div>
+      </div>
+      <div class="card m-2">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5667/angry-designer.jpg" alt="設計師"
+          style="width: 18rem; height: 14rem;">
+        <div class="card-body text-center">
+          <label for="designer">設計師</label>
+          <input type="radio" name="Profession" id="designer" value="designer">
+        </div>
+      </div>
+      <div class="card m-2">
+        <img src="https://assets-lighthouse.s3.amazonaws.com/uploads/image/file/5669/angry-founder.jpg" alt="創業家"
+          style="width: 18rem; height: 14rem;">
+        <div class="card-body text-center">
+          <label for="entrepreneur">創業家</label>
+          <input type="radio" name="Profession" id="entrepreneur" value="entrepreneur">
+        </div>
+      </div>
+    </div>
+    <div class="container mt-4 trashTalk-generator d-flex">
+      <button type="submit" class="btn btn-outline-success trashTalk-button align-self-start">產生幹話</button>
+      <div class="ml-3 flex-grow-1">
+        <textarea readonly class="form-control font-weight-bold" rows="3" aria-label="" style="font-size: larger;">{{#if trashTalk}} {{ trashTalk }} {{else}} 幹話... {{/if}}
+          </textarea>
+      </div>
+    </div>
+  </form>
+</div>
